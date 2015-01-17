@@ -1,0 +1,178 @@
+body{
+  margin:0; padding: 0;
+  margin-top: 90; 
+  background-color: #95a5a6;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+p {
+    font-size: 20px;
+}
+
+.section-header{
+	font-size: 50px; 
+	text-transform: uppercase; 
+	font-family: 'Open Sans', sans-serif; 
+	font-weight: 700;
+}
+
+/* Navigation Bar*/
+
+@media(min-width:768px) {
+    .navbar-fixed-top {
+        padding: 25px 0;
+    }
+}
+
+.navbar {
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+.navbar .navbar-nav {
+    letter-spacing: 1px;
+}
+
+.navbar a{
+	font-size: 1em;
+}
+
+.navbar a:focus {
+    outline: 0;
+}
+
+.navbar .navbar-nav li a:focus {
+    outline: 0;
+}
+
+.navbar-default,
+.navbar-inverse {
+    border: 0;
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    color: #fff;
+    background: #dc3522;
+}
+
+header .container {
+    padding-top: 400px;
+    padding-bottom: 260px;
+}
+
+header .intro-text .name {
+    display: block;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+header .intro-text .description {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+@media(min-width:600px) {
+    header .intro-text .name {
+        font-size: 66px;
+		
+    }
+
+    header .intro-text .description {
+        font-size: 24px;
+    }
+}
+
+/* Links */
+
+.aboutlink:link {
+    color: #dc3522;
+}
+
+.aboutlink:visited {
+    color: #dc3522;
+}
+
+.aboutlink:hover {
+    color: #dc3522;
+}
+
+.aboutlink:active {
+    color: #dc3522;
+}
+
+/* Portfolio */
+
+#portfolio {
+    text-align: center;
+    color: #fff;
+    background: #dc3522;
+}
+
+.portfolio-item {
+    margin: 0 0 20px;
+}
+
+/* Contact Form */
+
+.form-control{
+	font-size: 20px;
+}
+
+/* Footer */
+
+footer{
+	background: #2a313e;
+	height: 80px;
+}
+
+/* Override Bootstrap*/
+
+button {
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    background-image:none !important;
+    border:0 !important;
+	outline: none !important;
+	box-shadow:none !important;
+	border:1px solid #ccc !important;
+}
+
+textarea {
+	outline: none;
+	box-shadow:none !important;
+	border:1px solid #ccc !important;
+}
+
+textarea:focus{
+	border:1px solid #2a313e !important;
+}
+
+a .fa {
+	color: #FFF;
+}
+
+a .twitter:hover {
+	color: #4099FF;
+}
+
+a .github:hover {
+	color: #551A8B;
+}

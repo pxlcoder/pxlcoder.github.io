@@ -25,7 +25,7 @@ $(document).ready(function() {
 	
 	// Close Menu on Click
 	$('.navbar li a').click(function(e) {
-       $('.navbar-toggle:visible').click();
+		$('.navbar-toggle:visible').click();
     });
 	
 	// Highlight Links

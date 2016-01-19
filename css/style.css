@@ -173,6 +173,10 @@ section {
     margin: 0 0 20px;
 }
 
+img {
+    border:15px solid #2A313E;
+}
+
 /* Contact Links */
 
 a .fa {

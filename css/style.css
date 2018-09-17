@@ -1,207 +1,378 @@
-html, body{
-	margin:0; padding: 0;
-	background-color: #212B38;
-    position: relative;
-	height: 100%;
+/*
+  Contents:
+    Base
+    Site container
+    Masthead
+    Thumbnail
+    Post
+    Pagination
+    Footer
+    Menu
+    Code
+    Tables
+    Social media icons
+*/
+
+/*
+  Base
+*/
+
+body {
+  font-family: "Lato", serif;
+  font-size: 18px;
+  color: #515151;
+  line-height: 1.75rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    text-transform: uppercase;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
+@media (max-width: 30em) {
+  body {
+    font-size: 14px;
+    line-height: 1.5rem;
+  }
+  body h1 {
+    font-size: 1.5rem;
+  }
 }
 
-h4{
-	color: #FFFFFF;
+h1{
+  font-size: 2rem;
 }
 
-p {
-    font-size: 20px;
-	color: #FFFFFF;
-	font-family: 'Open Sans', sans-serif;
+h1 a {
+  text-decoration: none;
 }
 
-/* Sections */
-
-section {
-	position: relative;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", sans-serif;
+  color: #333;
 }
 
-.section-header {
-	font-size: 50px; 
-	text-transform: uppercase; 
-	font-family: 'Open Sans', sans-serif; 
-	font-weight: 700;
-	color: #ffffff;
+a {
+  text-decoration: none;
+  color: #238cd8;
 }
 
-.section-anchor {
-    display: block;
-    position: absolute;
-    width: 0;
-    height: 0;
-    z-index: -1;
-    top: -10vh;
-    left: 0;
-    visibility: hidden;
-}
-
-/* Navigation */
-
-.navigation{
-	background-color: #3F4A56;
-	position: fixed;
-	height: 10%;
-	width: 100%;
-	z-index: 9999;
-	text-align: center;
-}
-
-.navigation-items {
-    list-style-type: none;
-    display: inline-block;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.navigation-item {
-    display: inline;
-    float: left;
-    position: relative;
-  	top: 50%;
-  	-webkit-transform: translateY(-50%);
-  	-ms-transform: translateY(-50%);
-  	transform: translateY(-50%);
-}
-
-.navigation-item a {
-	display: block;
-    text-align: center;
-    font-size: 15px;
-    margin-left: 15px;
-    margin-right: 15px;
-    color: #ffffff;
-    text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.navigation-item a:hover {
-    color: #d3d3d3;
-    cursor: pointer;
-}
-
-/* Header */
-
-.header {
-    height: 100%;
-	width: 100%;
-    min-height: 100%;
-	text-align: center;
-    color: #FFF;
-    background: url(../images/background.jpg) no-repeat;
-    background-attachment: fixed;       
-    webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; 
-}
-
-.vcenter {
-	position: relative;
-  	top: 50%;
-  	-webkit-transform: translateY(-50%);
-  	-ms-transform: translateY(-50%);
-  	transform: translateY(-50%);
-}
-
-.intro-text .name {
-    display: block;
-    text-transform: uppercase;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 40px;
-    font-weight: 800;
-    opacity: 0.95;
-	color: #FFFFFF;
-}
-
-.intro-text .description {
-    display: block;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    opacity: 0.95;
-	color: #FFFFFF;
-}
-
-@media(min-width:600px) {
-    .navigation-item a {
-        font-size: 20px;
-        margin-left: 25px;
-        margin-right: 25px;
-    }
-
-    .intro-text .name {
-        font-size: 66px;
-    }
-
-    .intro-text .description {
-        font-size: 24px;
-    }
-}
-
-/* Links */
-
-.aboutlink:link, .aboutlink:visited, .aboutlink:hover, .aboutlink:active{
-    color: #DC3522;
-}
-
-/* Portfolio */
-
-#section-portfolio {
-    text-align: center;
-    color: #FFF;
-    background: #C58B53;
-}
-
-.portfolio-item {
-    margin: 0 0 20px;
+a:hover {
+  color: #0645AD;
+  border-bottom: none;
 }
 
 img {
-    border:15px solid #2A313E;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
-/* Contact Links */
-
-a .fa {
-	color: #FFF;
+blockquote {
+  margin: 10px 20px 10px;
+  padding: 0px 15px;
+  border-left: 0.25em solid #ccc;
+  color: #999;
+  line-height: 1.5;
 }
 
-a .twitter {
-	color: #4099FF;
+hr {
+  border-top: 1px solid #ccc;
 }
 
-a .github{
-	color: #7F0F7D;
+/*
+  Site container
+*/
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 615px;
 }
 
-a .linkedin{
-	color: #0077B5;
+/*48em*/
+
+@media (max-width: 768px) {
+  .container {
+    width: 90vw;
+  }
 }
 
-a .email{
-	color: #C5C5C5;
+/*
+  Masthead
+*/
+
+.masthead {
+  font-size: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  font-family: "Lato", sans-serif;
+  border-bottom: 1px solid gray;
 }
 
-/* Footer */
-
-footer{
-	background: #3F4A56;
-	height: 80px;
+.masthead a:hover {
+  color:black;
 }
+
+.masthead-title a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #505050;
+}
+
+.masthead-title p {
+  margin-bottom: 1rem;
+}
+
+.masthead-subtitle {
+  color: #999;
+}
+
+/*
+  Thumbnail
+*/
+
+.thumbnail-container {
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+
+.thumbnail-container img{
+  margin-top: -11.5%;
+  margin-bottom: -11.5%;
+}
+
+/*
+  Post
+*/
+
+.post-container {
+  margin-bottom: 4rem;
+}
+
+.posts {
+  margin-bottom: 5rem;
+  padding: 0px;
+  list-style: none;
+}
+
+.post-date {
+  display: block;
+  margin-top:3px;
+  margin-bottom: 1rem;
+  color: #9a9a9a;
+  font-family: 'Lato', sans-serif;
+  font-size:0.8rem;
+}
+
+@media (max-width: 30rem) {
+  .posts h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.related {
+  padding-bottom: 2rem;
+}
+
+.related-posts {
+  padding-left: 0px;
+  list-style: none;
+}
+
+.related-posts a {
+  text-decoration: none;
+}
+
+/*
+  Pagination
+*/
+
+.pagination {
+  overflow: hidden;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+.pagination a {
+  text-decoration: none;
+}
+
+.pagination-button {
+  color: #999;
+  border: 1px solid #e0e0e0;
+  padding: 15px 45px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.pagination-active {
+  color: black;
+}
+
+.pagination-active:hover {
+  background-color: #e0e0e0;
+}
+
+/*
+  Footer
+*/
+
+.footer {
+  color: #999;
+  text-align: center;
+  margin: 2rem;
+}
+
+.footer a {
+  color: #999;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #333;
+}
+
+/*
+  Menu
+*/
+
+.menu {
+  padding-top: 0.5rem;
+  display: block;
+}
+
+.menu-content {
+  float: left;
+}
+
+.menu-content a {
+  color: #999;
+  font-size: 1rem;
+  padding-right: 10px;
+}
+
+.social-icons {
+  float: right;
+}
+
+.social-icons a {
+  color: #999;
+  font-size: 1rem;
+}
+
+@media (max-width: 30em) {
+  .social-icons {
+    float: left;
+    padding-top: 0px;
+  }
+  .menu-content {
+    margin-bottom: 5px;
+  }
+}
+
+/*
+  Code
+*/
+
+code,
+pre {
+  font-family: "Source Code Pro", monospace;
+}
+code {
+  padding: .25em .5em;
+  font-size: .8rem;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+}
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: .8rem;
+  line-height: 1.4;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+}
+pre code {
+  padding: 0;
+  font-size: 100%;
+  color: inherit;
+  background-color: transparent;
+}
+
+/* Pygments via Jekyll */
+.highlight {
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+.highlight pre {
+  margin-bottom: 0;
+}
+
+/* Gist via GitHub Pages */
+.gist .gist-file {
+  font-family: "Source Code Pro", monospace !important;
+}
+.gist .markdown-body {
+  padding: 15px;
+}
+.gist pre {
+  padding: 0;
+  background-color: transparent;
+}
+.gist .gist-file .gist-data {
+  font-size: .8rem !important;
+  line-height: 1.4;
+}
+.gist code {
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+/*
+  Tables
+*/
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+/*
+Copyright (c) 2017 Paul Le
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
